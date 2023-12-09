@@ -76,8 +76,7 @@ def save_json(filename="data.json",tail:int=10,prec:int=100):
         json.dump({"data":data}, f, indent=4)
         
 if __name__ == "__main__":
-    save_json()
-
+    save_json(tail=14,prec=50)
 
 
 

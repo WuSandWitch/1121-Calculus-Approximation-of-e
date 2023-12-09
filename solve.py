@@ -36,7 +36,7 @@ def approximation1(n:int,prec:int = 100) -> Decimal:
             lower = middle
 
         step += 1
-        print(f"step {step:4} : e value {middle}")
+        print(f"step {step:4} : e value {middle}",end='\r')
     return Decimal((lower+upper)/2)
 
 def approximation2(n:int,prec:int = 100) -> Decimal:
