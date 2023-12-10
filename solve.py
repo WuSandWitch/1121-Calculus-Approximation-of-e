@@ -67,7 +67,7 @@ def approximation3(n:int,prec:int = 100) -> Decimal:
     return s
 
 if __name__ == '__main__':
-    print(approximation1(1))
+    print(approximation1(1e3))
     print(approximation2(1e20))
     print(approximation3(100000000))
     print("2.7182818284590452353602874713526624977572470936999595749669676277240766303535475945713821785251664274")
