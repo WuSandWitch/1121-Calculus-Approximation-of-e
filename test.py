@@ -15,7 +15,7 @@ def test(tail:int=10,prec:int=15) -> list[dict]:
         start = time.time()
         test_e = solve.approximation1(n,prec=prec)
         time_delta = time.time() - start
-        while str(test_e)[:precision] != real_e[:precision]:
+        while str(test_e)[:precision+2] != real_e[:precision+2]:
             
             start = time.time()
             n *= 2
@@ -33,7 +33,7 @@ def test(tail:int=10,prec:int=15) -> list[dict]:
         start = time.time()
         test_e = solve.approximation2(n,prec=prec)
         time_delta = time.time() - start
-        while str(test_e)[:precision] != real_e[:precision]:
+        while str(test_e)[:precision+2] != real_e[:precision+2]:
             
             start = time.time()
             n *= 2
@@ -51,7 +51,7 @@ def test(tail:int=10,prec:int=15) -> list[dict]:
         start = time.time()
         test_e = solve.approximation3(n,prec=prec)
         time_delta = time.time() - start
-        while str(test_e)[:precision] != real_e[:precision]:
+        while str(test_e)[:precision+2] != real_e[:precision+2]:
             
             start = time.time()
             n += 1
@@ -76,7 +76,7 @@ def save_json(filename="data.json",tail:int=10,prec:int=100):
         json.dump({"data":data}, f, indent=4)
         
 if __name__ == "__main__":
-    save_json(tail=15,prec=100)
+    save_json(tail=10,prec=100)
 
 
 
